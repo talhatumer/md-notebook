@@ -9,9 +9,8 @@ const NotePage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // slug'a göre doğru markdown dosyasını fetch et
-        // Dosya public klasöründe olduğu için direkt bu şekilde erişebiliriz.
-        fetch(`/notes/${slug}.md`)
+        // PUBLIC_URL'i kullanarak doğru yolu oluşturuyoruz
+        fetch(`${process.env.PUBLIC_URL}/notes/${slug}.md`) // <--- ÇÖZÜM BU
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Not bulunamadı');
