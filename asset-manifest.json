@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/md-notebook/static/css/main.95bf8528.css",
+    "main.js": "/md-notebook/static/js/main.af836cd0.js",
+    "static/js/453.0f01a2d7.chunk.js": "/md-notebook/static/js/453.0f01a2d7.chunk.js",
+    "index.html": "/md-notebook/index.html",
+    "main.95bf8528.css.map": "/md-notebook/static/css/main.95bf8528.css.map",
+    "main.af836cd0.js.map": "/md-notebook/static/js/main.af836cd0.js.map",
+    "453.0f01a2d7.chunk.js.map": "/md-notebook/static/js/453.0f01a2d7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95bf8528.css",
+    "static/js/main.af836cd0.js"
+  ]
+}
