@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "slug": "react-hooks",
+        "title": "React Hooks Temelleri",
+        "category": "React",
+        "tags": [
+            "javascript",
+            "react",
+            "hooks",
+            "frontend"
+        ],
+        "file": "/notes/react-hooks.md",
+        "description": "useState, useEffect gibi temel React hook'larının kullanımı ve mantığı."
+    },
+    {
+        "id": 2,
+        "slug": "css-flexbox",
+        "title": "CSS Flexbox'a Pratik Giriş",
+        "category": "CSS",
+        "tags": [
+            "css",
+            "flexbox",
+            "layout",
+            "frontend"
+        ],
+        "file": "/notes/css-flexbox.md",
+        "description": "Modern web tasarımları için Flexbox'ın temel kavramları ve kullanımı."
+    }
+]
