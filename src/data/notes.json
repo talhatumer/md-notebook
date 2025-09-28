@@ -26,5 +26,18 @@
         ],
         "file": "/notes/css-flexbox.md",
         "description": "Modern web tasarımları için Flexbox'ın temel kavramları ve kullanımı."
+    },
+    {
+        "id": 3,
+        "slug": "docker-temeller",
+        "title": "Docker temel bilgileri",
+        "category": "DOCKER",
+        "tags": [
+            "docker",
+            "container",
+            "backend"
+        ],
+        "file": "/notes/docker-temeller.md",
+        "description": "Docker Docker Docker temel kavramları ve kullanımı."
     }
 ]
