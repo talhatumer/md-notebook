@@ -29,15 +29,15 @@
     },
     {
         "id": 3,
-        "slug": "docker-temeller",
-        "title": "Docker temel bilgileri",
+        "slug": "comprehensive-docker-documentation",
+        "title": "Comprehensive Docker Documentation",
         "category": "DOCKER",
         "tags": [
             "docker",
             "container",
             "backend"
         ],
-        "file": "/notes/docker-temeller.md",
-        "description": "Docker Docker Docker temel kavramları ve kullanımı."
+        "file": "/notes/comprehensive-docker-documentation.md",
+        "description": "A complete Docker reference covering installation, core concepts, commands, Dockerfiles, container orchestration, networking, volumes, and production best practices."
     }
 ]
