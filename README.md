@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+## ⚛️ **React Projeleri Nasıl Yayınlanır?**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React, Next.js gibi değil → build ettiğinde tamamen statik dosyalar üretir.  
+Yani GitHub Pages için **mükemmel uyumludur** 👌
 
-## Available Scripts
+### 🪜 Örnek: React Projesi Yayınlama
 
-In the project directory, you can run:
+#### 1️⃣ Proje oluştur
 
-### `npm start`
+`npx create-react-app my-app cd my-app`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### 2️⃣ `package.json` içine homepage alanı ekle
 
-### `npm test`
+`"homepage":  "https://<kullanıcı-adı>.github.io/<repo-adi>"`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📌 Bu alan, React build çıktısındaki yolları doğru ayarlaması için şarttır.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 3️⃣ GitHub Pages paketi ekle
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm install gh-pages --save-dev`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+#### 4️⃣ `package.json` script’lerine ekle
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`"scripts":  {  "predeploy":  "npm run build",  "deploy":  "gh-pages -d build",  "start":  "react-scripts start",  "build":  "react-scripts build"  }`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 5️⃣ GitHub’da boş bir repo oluştur (`my-app` vs.)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Sonra terminalde:
 
-## Learn More
+`git remote add origin https://github.com/<kullanıcı-adı>/<repo-adi>.git
+git branch -M main
+git push -u origin main`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 6️⃣ Deploy et 🚀
 
-### Code Splitting
+`npm run deploy`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Bu komut:
 
-### Analyzing the Bundle Size
+- `build/` klasörünü oluşturur
+- `gh-pages` adında özel bir branch’a atar
+- GitHub Pages bu branch’tan siteyi yayına alır 🌐
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+#### 7️⃣ GitHub Pages ayarlarını yap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Repo → **Settings → Pages**
+- Source → `gh-pages` branch, `/ (root)` seç
+- Kaydet.
 
-### Advanced Configuration
+👉 Artık React siten şu adreste yayında:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+`https://<kullanıcı-adı>.github.io/<repo-adi>/`
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+✅ İşte bu kadar!
