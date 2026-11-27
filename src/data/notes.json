@@ -39,5 +39,17 @@
         ],
         "file": "/notes/comprehensive-docker-documentation.md",
         "description": "A complete Docker reference covering installation, core concepts, commands, Dockerfiles, container orchestration, networking, volumes, and production best practices."
+    },
+    {
+        "id": 4,
+        "slug": "dotnet-backend-developer-interview-roadmap",
+        "title": "🚀 .NET Backend Developer Interview Roadmap",
+        "category": "DOTNET",
+        "tags": [
+            "dotnet",
+            "backend"
+        ],
+        "file": "/notes/dotnet-backend-developer-interview-roadmap.md",
+        "description": "dotnet roadmap"
     }
 ]
